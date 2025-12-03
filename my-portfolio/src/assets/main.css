@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations / utilities */
+@layer utilities {
+  /* safe, reusable glass-card utility */
+  .glass-card {
+    /* supported Tailwind @apply utilities */
+    @apply backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl;
+    /* direct background color with rgba for consistent opacity */
+    background-color: rgba(255,255,255,0.05); /* 5% white */
+  }
+}
+
+/* floating animation for hero avatar */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.avatar-float {
+  animation: floaty 4s ease-in-out infinite;
+}
+
+/* subtle slide-in for hero text */
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-24px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.hero-slide-left {
+  animation: slideInLeft 0.8s cubic-bezier(.2,.9,.3,1) both;
+}
+
+/* pulse border glow for profile */
+@keyframes glow {
+  0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.0); }
+  50% { box-shadow: 0 0 20px 8px rgba(34,197,94,0.08); }
+  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.0); }
+}
+.avatar-glow {
+  animation: glow 3s ease-in-out infinite;
+}
