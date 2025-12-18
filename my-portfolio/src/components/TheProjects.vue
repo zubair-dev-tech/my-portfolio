@@ -44,7 +44,7 @@
         <div class="p-8 flex flex-col flex-grow">
           <h3 class="text-xl font-bold text-gray-800 mb-2">{{ project.title }}</h3>
           
-          <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+          <p class="text-gray-600 text-base leading-relaxed mb-4 flex-grow">
             {{ project.description }}
           </p>
 
@@ -53,7 +53,7 @@
             <span 
               v-for="tech in project.techStack" 
               :key="tech"
-              class="text-xs font-bold text-brand-green bg-green-50 px-3 py-1 rounded-md uppercase tracking-wide border border-green-100"
+              class="text-sm font-bold text-brand-green bg-green-50 px-3 py-1 rounded-md uppercase tracking-wide border border-green-100"
             >
               {{ tech }}
             </span>
@@ -67,10 +67,10 @@
           <a 
             :href="project.link" 
             target="_blank"
-            class="custom-bounce relative overflow-hidden w-full bg-brand-green text-white px-6 py-3 rounded-full font-semibold text-sm shadow-md shadow-green-200 hover:bg-green-500 hover:shadow-lg transition-all duration-300 group/btn block text-center cursor-pointer"
+            class="custom-bounce relative overflow-hidden group text-lg w-fit bg-brand-green text-white px-8 py-3 rounded-full font-semibold shadow-lg shadow-green-900/50 hover:shadow-green-400 transition-all duration-300 whitespace-nowrap inline-block cursor-pointer  mb-12"
           >
             <span class="relative z-10">View Project</span>
-            <div class="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 group-hover/btn:animate-shine"></div>
+            <div class="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 group-hover:animate-shine"></div>
           </a>
 
         </div>
@@ -89,7 +89,7 @@ const projects = ref([
      id: 'landing-page',
     title: 'Creative Landing Page',
     description: 'A high-converting landing page with modern animations, responsive layout, and SEO optimization designed to boost user engagement.',
-    techStack: ['Vue.js', 'Tailwind CSS', 'AOS'],
+    techStack: ['Vue.JS', 'Tailwind CSS', 'AOS'],
     image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1350&q=80',
     // Yahan Link Dalain
     link: 'https://your-landing-page-link.com' 
@@ -97,9 +97,9 @@ const projects = ref([
   // 2. E-COMMERCE
   {
      id: 'ecommerce',
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce website built with Next.JS and React, featuring product filtering, cart functionality, and secure checkout.',
-    techStack: ['Next.JS', 'React', 'CSS3'],
+    title: 'Modern E-commerce UI',
+    description: 'Designed a pixel-perfect, responsive shopping interface focusing on component reusability and modern design patterns. Built a dynamic shopping cart and wishlist system using Context API to manage application state seamlessly across user sessions.',
+    techStack: ['NEXT.JS', 'REACT.JS', 'TAILWIND CSS'],
     image: 'ecom.png',
     // Yahan Link Dalain
     link: 'https://chrono-lux.odoo.com/'
@@ -109,18 +109,18 @@ const projects = ref([
     id: 'dashboard',
     title: 'Analytics Dashboard',
     description: 'An interactive dashboard for data visualization with real-time updates, built with React and Chart.js.',
-    techStack: ['React', 'Chart.js', 'Bootstrap'],
+    techStack: ['NEXT.JS', 'TAILWIND CSS', 'CHART.JS'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     // Yahan Link Dalain
     link: 'https://your-dashboard-link.com'
   },
   // 4. CHROME EXTENSION
   {
-     id: 'extension',
-    title: 'Productivity Chrome Extension',
-    description: 'A browser extension that helps users stay focused and manage their time effectively while browsing.',
-    techStack: ['Chrome Extension', 'JavaScript'],
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+     id: 'seo',
+    title: 'SEO Blog Application',
+    description: 'A high-performance blog featuring Server-Side Rendering (SSR) and Schema Markup for maximum Google ranking and speed.',
+    techStack: ['NEXT.JS','TAILWIND CSS', 'SANITY CMS'],
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
     // Yahan Link Dalain
     link: 'https://your-extension-link.com'
   }
